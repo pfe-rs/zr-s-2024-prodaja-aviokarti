@@ -20,9 +20,9 @@ class Node:
 
         for child in self.children:
             #print(child.value, child.children)
-            if child.dfs_search(target):
-                return True
-
+            if child.value == target[self.depth + 1]:
+                if child.dfs_search(target):
+                    return True
 
 class Destinacija:
     def __init__(self, vreme, datum, mesto, polazakDolazak):
@@ -101,15 +101,33 @@ class Let:
         return self._dolazak
     
 class Aviokompanija:
-    def __init__(self, letovi):
-        self._letovi = letovi
+    def __init__(self):
+        self._letovi = Node(-1, -1)
 
     def getLetovi(self):
         return self._letovi
     
-    #mozda moze efikacnije
     def traziLet(self, atributi):
-        return root.dfs_search(atributi)
+        return self.getLetovi().dfs_search(atributi)
+    
+    def dodajLet(self, let):
+        tr_node = self.getLetovi()
+        polazak = let.getPolazak()
+        dolazak = let.getDolazak()
+        destinacije = [polazak.getMesto(), polazak.getDatum(), polazak.getVreme(), dolazak.getMesto(), dolazak.getDatum(), dolazak.getVreme()]
+        for i in range(6):
+            for child in tr_node.children:
+                #print("Dodavanje")
+                #print(tr_node.value)
+                #print(destinacije[i], child.value)
+                #for child2 in child.children:
+                #    print(child2.value)
+                if destinacije[i] == child.value:
+                    print("desilo se")
+                    tr_node = child
+                    break
+            tr_node.add_child(Node(destinacije[i], i))
+            tr_node = tr_node.children[-1]
 
 class Korisnik:
     def __init__(self):
@@ -178,11 +196,13 @@ class Korisnik:
         self._kontakt = None
         self._kartica = None
 
+
     def kupiKartu(self, sediste, klasaLeta):
         sediste.setDostupnost(False)
         for x in klasaLeta.getSedista():
             if x.getId() == sediste.getId():
                 klasaLeta.getSedista().remove(x)
+
 
 
 
@@ -197,29 +217,8 @@ Let1 = Let(300, 150, [KlasaEkonomska, KlasaBiznis, KlasaPrva], Polazak, Dolazak)
 
 
 
-root = Node(-1, -1)
-tr_node = Node("London", 0)
-root.add_child(tr_node)
-sledeci_node = Node("04.04.2024", 1)
-tr_node.add_child(sledeci_node)
-tr_node = sledeci_node
-sledeci_node = Node("19:30", 2)
-tr_node.add_child(sledeci_node)
-
-tr_node = sledeci_node
-sledeci_node = Node("Madrid", 3)
-tr_node.add_child(sledeci_node)
-
-tr_node = sledeci_node
-sledeci_node = Node("04.04.2024", 4)
-tr_node.add_child(sledeci_node)
-
-tr_node = sledeci_node
-sledeci_node = Node("22:00", 5)
-tr_node.add_child(sledeci_node)
-
 korisnik = Korisnik()
-aviokompanija = Aviokompanija(root)
+aviokompanija = Aviokompanija()
 #print(aviokompanija._letovi.children[0].value)
 
 
@@ -300,7 +299,11 @@ korisnik.logout()
 
     
 
-print()
 
 
+argumenti = ["London", "04.04.2024", "19:30", "Madrid", "04.04.2024", "22:00"]
 
+aviokompanija.dodajLet(Let1)
+
+#print(aviokompanija._letovi.children[0].value)
+print(korisnik.dajArgumente(argumenti, aviokompanija))

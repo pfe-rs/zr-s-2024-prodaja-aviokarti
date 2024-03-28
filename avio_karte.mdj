@@ -64,7 +64,7 @@
 											"fontColor": "#3B0202",
 											"font": "Arial;13;1",
 											"left": 309,
-											"top": 135,
+											"top": 87,
 											"width": 101.80078125,
 											"height": 13,
 											"text": "Let"
@@ -104,7 +104,7 @@
 									"fontColor": "#3B0202",
 									"font": "Arial;13;0",
 									"left": 304,
-									"top": 128,
+									"top": 80,
 									"width": 111.80078125,
 									"height": 25,
 									"stereotypeLabel": {
@@ -144,7 +144,7 @@
 											"fontColor": "#3B0202",
 											"font": "Arial;13;0",
 											"left": 309,
-											"top": 158,
+											"top": 110,
 											"width": 101.80078125,
 											"height": 13,
 											"text": "-brojPutnika",
@@ -164,7 +164,7 @@
 											"fontColor": "#3B0202",
 											"font": "Arial;13;0",
 											"left": 309,
-											"top": 173,
+											"top": 125,
 											"width": 101.80078125,
 											"height": 13,
 											"text": "-trajanje",
@@ -184,10 +184,50 @@
 											"fontColor": "#3B0202",
 											"font": "Arial;13;0",
 											"left": 309,
-											"top": 188,
+											"top": 140,
 											"width": 101.80078125,
 											"height": 13,
 											"text": "-klase",
+											"horizontalAlignment": 0
+										},
+										{
+											"_type": "UMLAttributeView",
+											"_id": "AAAAAAGOhHf4oyidVZY=",
+											"_parent": {
+												"$ref": "AAAAAAGOgG/hGIqgI7c="
+											},
+											"model": {
+												"$ref": "AAAAAAGOhHf4liiaT3g="
+											},
+											"lineColor": "#700000",
+											"fillColor": "#FF8282",
+											"fontColor": "#3B0202",
+											"font": "Arial;13;0",
+											"left": 309,
+											"top": 155,
+											"width": 101.80078125,
+											"height": 13,
+											"text": "-polazak",
+											"horizontalAlignment": 0
+										},
+										{
+											"_type": "UMLAttributeView",
+											"_id": "AAAAAAGOhHf5fClITIk=",
+											"_parent": {
+												"$ref": "AAAAAAGOgG/hGIqgI7c="
+											},
+											"model": {
+												"$ref": "AAAAAAGOhHf5dylFBS8="
+											},
+											"lineColor": "#700000",
+											"fillColor": "#FF8282",
+											"fontColor": "#3B0202",
+											"font": "Arial;13;0",
+											"left": 309,
+											"top": 170,
+											"width": 101.80078125,
+											"height": 13,
+											"text": "-dolazak",
 											"horizontalAlignment": 0
 										}
 									],
@@ -196,9 +236,9 @@
 									"fontColor": "#3B0202",
 									"font": "Arial;13;0",
 									"left": 304,
-									"top": 153,
+									"top": 105,
 									"width": 111.80078125,
-									"height": 53
+									"height": 83
 								},
 								{
 									"_type": "UMLOperationCompartmentView",
@@ -224,7 +264,7 @@
 											"fontColor": "#3B0202",
 											"font": "Arial;13;0",
 											"left": 309,
-											"top": 211,
+											"top": 193,
 											"width": 101.80078125,
 											"height": 13,
 											"text": "+getBrojPutnika()",
@@ -244,7 +284,7 @@
 											"fontColor": "#3B0202",
 											"font": "Arial;13;0",
 											"left": 309,
-											"top": 226,
+											"top": 208,
 											"width": 101.80078125,
 											"height": 13,
 											"text": "+getTrajanje()",
@@ -264,10 +304,50 @@
 											"fontColor": "#3B0202",
 											"font": "Arial;13;0",
 											"left": 309,
-											"top": 241,
+											"top": 223,
 											"width": 101.80078125,
 											"height": 13,
 											"text": "+getKlase()",
+											"horizontalAlignment": 0
+										},
+										{
+											"_type": "UMLOperationView",
+											"_id": "AAAAAAGOhH1GdzGnVFA=",
+											"_parent": {
+												"$ref": "AAAAAAGOgG/hGIqhuLs="
+											},
+											"model": {
+												"$ref": "AAAAAAGOhH1GbjGklgg="
+											},
+											"lineColor": "#700000",
+											"fillColor": "#FF8282",
+											"fontColor": "#3B0202",
+											"font": "Arial;13;0",
+											"left": 309,
+											"top": 238,
+											"width": 101.80078125,
+											"height": 13,
+											"text": "+getPolazak()",
+											"horizontalAlignment": 0
+										},
+										{
+											"_type": "UMLOperationView",
+											"_id": "AAAAAAGOhH1c4zLaUSs=",
+											"_parent": {
+												"$ref": "AAAAAAGOgG/hGIqhuLs="
+											},
+											"model": {
+												"$ref": "AAAAAAGOhH1c3zLXU+0="
+											},
+											"lineColor": "#700000",
+											"fillColor": "#FF8282",
+											"fontColor": "#3B0202",
+											"font": "Arial;13;0",
+											"left": 309,
+											"top": 253,
+											"width": 101.80078125,
+											"height": 13,
+											"text": "+getDolazak()",
 											"horizontalAlignment": 0
 										}
 									],
@@ -279,6 +359,9 @@
 									"top": 206,
 									"width": 111.80078125,
 									"height": 53
+									"top": 188,
+									"width": 111.80078125,
+									"height": 83
 								},
 								{
 									"_type": "UMLReceptionCompartmentView",
@@ -321,9 +404,9 @@
 							"font": "Arial;13;0",
 							"containerChangeable": true,
 							"left": 304,
-							"top": 128,
+							"top": 80,
 							"width": 110.80078125,
-							"height": 131,
+							"height": 209,
 							"nameCompartment": {
 								"$ref": "AAAAAAGOgG/hF4qb4lA="
 							},
@@ -3027,7 +3110,7 @@
 											"top": 342,
 											"width": 159,
 											"height": 13,
-											"text": "-Letovi: lista",
+											"text": "-Letovi: stablo",
 											"horizontalAlignment": 0
 										}
 									],
@@ -3183,8 +3266,8 @@
 									},
 									"visible": false,
 									"font": "Arial;13;0",
-									"left": 392,
-									"top": 278,
+									"left": 392
+									"top": 293,
 									"height": 13,
 									"alpha": 1.5707963267948966,
 									"distance": 15,
@@ -3205,7 +3288,7 @@
 									"visible": null,
 									"font": "Arial;13;0",
 									"left": 407,
-									"top": 278,
+									"top": 293,
 									"height": 13,
 									"alpha": 1.5707963267948966,
 									"distance": 30,
@@ -3226,7 +3309,7 @@
 									"visible": false,
 									"font": "Arial;13;0",
 									"left": 363,
-									"top": 279,
+									"top": 294,
 									"height": 13,
 									"alpha": -1.5707963267948966,
 									"distance": 15,
@@ -3247,7 +3330,7 @@
 									"visible": false,
 									"font": "Arial;13;0",
 									"left": 393,
-									"top": 278,
+									"top": 308,
 									"height": 13,
 									"alpha": 0.5235987755982988,
 									"distance": 30,
@@ -3268,7 +3351,7 @@
 									"visible": false,
 									"font": "Arial;13;0",
 									"left": 406,
-									"top": 281,
+									"top": 311,
 									"height": 13,
 									"alpha": 0.7853981633974483,
 									"distance": 40,
@@ -3289,7 +3372,7 @@
 									"visible": false,
 									"font": "Arial;13;0",
 									"left": 365,
-									"top": 274,
+									"top": 304,
 									"height": 13,
 									"alpha": -0.5235987755982988,
 									"distance": 25,
@@ -3394,7 +3477,7 @@
 							"tail": {
 								"$ref": "AAAAAAGOgG/hFoqapt8="
 							},
-							"points": "378:259;378:312",
+							"points": "378:289;378:312",
 							"showVisibility": true,
 							"nameLabel": {
 								"$ref": "AAAAAAGOgZ7bxdK4PPY="
@@ -3768,7 +3851,28 @@
 								"$ref": "AAAAAAGOgG/hEoqYuhU="
 							},
 							"name": "klase",
-							"visibility": "private"
+							"visibility": "private",
+							"type": ""
+						},
+						{
+							"_type": "UMLAttribute",
+							"_id": "AAAAAAGOhHf4liiaT3g=",
+							"_parent": {
+								"$ref": "AAAAAAGOgG/hEoqYuhU="
+							},
+							"name": "polazak",
+							"visibility": "private",
+							"type": ""
+						},
+						{
+							"_type": "UMLAttribute",
+							"_id": "AAAAAAGOhHf5dylFBS8=",
+							"_parent": {
+								"$ref": "AAAAAAGOgG/hEoqYuhU="
+							},
+							"name": "dolazak",
+							"visibility": "private",
+							"type": ""
 						}
 					],
 					"operations": [
@@ -3795,6 +3899,22 @@
 								"$ref": "AAAAAAGOgG/hEoqYuhU="
 							},
 							"name": "getKlase"
+						},
+						{
+							"_type": "UMLOperation",
+							"_id": "AAAAAAGOhH1GbjGklgg=",
+							"_parent": {
+								"$ref": "AAAAAAGOgG/hEoqYuhU="
+							},
+							"name": "getPolazak"
+						},
+						{
+							"_type": "UMLOperation",
+							"_id": "AAAAAAGOhH1c3zLXU+0=",
+							"_parent": {
+								"$ref": "AAAAAAGOgG/hEoqYuhU="
+							},
+							"name": "getDolazak"
 						}
 					]
 				},
@@ -4495,7 +4615,7 @@
 							},
 							"name": "Letovi",
 							"visibility": "private",
-							"type": "lista"
+							"type": "stablo"
 						}
 					],
 					"operations": [
