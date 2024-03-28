@@ -12,7 +12,7 @@ class Node:
                         if child is not child_node]
         
     def dfs_search(self, target):
-        print(self.depth, self.value, target[self.depth])
+        #print(self.depth, self.value, target[self.depth])
         if self is None:
             return False
 
@@ -119,11 +119,17 @@ class Aviokompanija:
         destinacije = [polazak.getMesto(), polazak.getDatum(), polazak.getVreme(), dolazak.getMesto(), dolazak.getDatum(), dolazak.getVreme()]
         for i in range(6):
             for child in tr_node.children:
+                #print("Dodavanje")
+                #print(tr_node.value)
+                #print(destinacije[i], child.value)
+                #for child2 in child.children:
+                #    print(child2.value)
                 if destinacije[i] == child.value:
+                    print("desilo se")
                     tr_node = child
                     break
             tr_node.add_child(Node(destinacije[i], i))
-            tr_node = tr_node.children[0]
+            tr_node = tr_node.children[-1]
 
 class Korisnik:
     def __init__(self):
