@@ -19,7 +19,6 @@ class Node:
             return True
 
         for child in self.children:
-            #print(child.value, child.children)
             if child.dfs_search(target):
                 return True
 
@@ -107,7 +106,6 @@ class Aviokompanija:
     def getLetovi(self):
         return self._letovi
     
-    #mozda moze efikacnije
     def traziLet(self, atributi):
         return root.dfs_search(atributi)
 
@@ -220,15 +218,11 @@ tr_node.add_child(sledeci_node)
 
 korisnik = Korisnik()
 aviokompanija = Aviokompanija(root)
-#print(aviokompanija._letovi.children[0].value)
 
-
-
-
-
-a = input("uneti 'preference' da se ooguci podesavanje ili 'let' da bi se pretrazio let: ")
+a = input("uneti 'preference' da se omoguci podesavanje ili 'let' da bi se pretrazio let: ")
 while a not in ['preference', 'let']:
-    a = input("uneti 'preference' da se ooguci podesavanje ili 'let' da bi se pretrazio let: ")
+    a = input("uneti 'preference' da se omoguci podesavanje ili 'let' da bi se pretrazio let: ")
+
 if a == "preference":
     korisnik.setPreference(input("uneti preference: ").split())
     a = input("uneti 'let' ukoliko zelite da nastavite kupovinu: ")
@@ -236,7 +230,7 @@ if a == "preference":
 
 if a == "let":
 
-    argumenti = input("uneti redom mesto polaska, datum i vreme potom destinaciju, datim dolaska i vreme sletanja: ").split()    #["London", "04.04.2024", "19:30", "Madrid", "04.04.2024", "22:00"]
+    argumenti = input("uneti redom mesto polaska, datum i vreme potom destinaciju, datim dolaska i vreme sletanja: ").split()   
 
 
     while not korisnik.dajArgumente(argumenti, aviokompanija):
@@ -283,7 +277,6 @@ if a == "let":
                 klasa = input("klasa nije dostupna, uneti 0 ili 1: ")
                 break
 
-        print(sedista)
 
     sediste = Sediste(int(input("uneti redni broj sedista: ")), 1)
     
@@ -294,13 +287,4 @@ if a == "let":
     print('CESTITAMO KUPILI STE KARTU')
 
 
-
 korisnik.logout()
-
-
-    
-
-print()
-
-
-
