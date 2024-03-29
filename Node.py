@@ -23,7 +23,7 @@ class Node:
         self.setChildren([child for child in self.getChildren() 
                         if child is not child_node]) 
         
-    def dfsSearch(self, target):
+    def dfs_search(self, target):
         #print(self.depth, self.value, target[self.depth])
         if self is None:
             return False
