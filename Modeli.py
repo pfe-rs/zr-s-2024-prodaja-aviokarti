@@ -5,6 +5,7 @@ from Destinacija import *
 from Let import *
 from Korisnik import *
 from Aviokompanija import *
+from Placanje import *
 
 file = open("Korisnici.txt", "r+")
 lines = file.readlines()

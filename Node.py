@@ -20,7 +20,7 @@ class Node:
         self.getChildren().append(child_node) 
 
     def removeChild(self, child_node):
-        self.setChildren([child for child in self.children 
+        self.setChildren([child for child in self.getChildren() 
                         if child is not child_node]) 
         
     def dfsSearch(self, target):
