@@ -4209,7 +4209,7 @@
 											"top": 608,
 											"width": 90.22265625,
 											"height": 13,
-											"text": "+Operation1()",
+											"text": "+getValue()",
 											"horizontalAlignment": 0
 										},
 										{
@@ -4229,7 +4229,7 @@
 											"top": 623,
 											"width": 90.22265625,
 											"height": 13,
-											"text": "+Operation2()",
+											"text": "+getDepth()",
 											"horizontalAlignment": 0
 										},
 										{
@@ -5106,7 +5106,8 @@
 								"$ref": "AAAAAAGOgG/hEoqYuhU="
 							},
 							"name": "klase",
-							"visibility": "private"
+							"visibility": "private",
+							"type": ""
 						},
 						{
 							"_type": "UMLAttribute",
@@ -5115,7 +5116,8 @@
 								"$ref": "AAAAAAGOgG/hEoqYuhU="
 							},
 							"name": "polazak",
-							"visibility": "private"
+							"visibility": "private",
+							"type": ""
 						},
 						{
 							"_type": "UMLAttribute",
@@ -5124,7 +5126,8 @@
 								"$ref": "AAAAAAGOgG/hEoqYuhU="
 							},
 							"name": "dolazak",
-							"visibility": "private"
+							"visibility": "private",
+							"type": ""
 						}
 					],
 					"operations": [
@@ -5441,7 +5444,8 @@
 								"$ref": "AAAAAAGOgHrc+ZV+qS0="
 							},
 							"name": "id",
-							"visibility": "private"
+							"visibility": "private",
+							"type": ""
 						},
 						{
 							"_type": "UMLAttribute",
@@ -5691,7 +5695,8 @@
 								"$ref": "AAAAAAGOgJKacshZ1Gw="
 							},
 							"name": "nacinPlacanja",
-							"visibility": "private"
+							"visibility": "private",
+							"type": ""
 						},
 						{
 							"_type": "UMLAttribute",
@@ -5700,7 +5705,8 @@
 								"$ref": "AAAAAAGOgJKacshZ1Gw="
 							},
 							"name": "rezervisaneKarte",
-							"visibility": "private"
+							"visibility": "private",
+							"type": ""
 						}
 					],
 					"operations": [
@@ -5975,7 +5981,8 @@
 								"$ref": "AAAAAAGOhte0RUzBWXw="
 							},
 							"name": "value",
-							"visibility": "private"
+							"visibility": "private",
+							"type": ""
 						},
 						{
 							"_type": "UMLAttribute",
@@ -5984,7 +5991,8 @@
 								"$ref": "AAAAAAGOhte0RUzBWXw="
 							},
 							"name": "depth",
-							"visibility": "private"
+							"visibility": "private",
+							"type": ""
 						},
 						{
 							"_type": "UMLAttribute",
@@ -5993,7 +6001,8 @@
 								"$ref": "AAAAAAGOhte0RUzBWXw="
 							},
 							"name": "children",
-							"visibility": "private"
+							"visibility": "private",
+							"type": ""
 						}
 					],
 					"operations": [
@@ -6027,7 +6036,7 @@
 							"_parent": {
 								"$ref": "AAAAAAGOhte0RUzBWXw="
 							},
-							"name": "Operation1"
+							"name": "getValue"
 						},
 						{
 							"_type": "UMLOperation",
@@ -6035,7 +6044,7 @@
 							"_parent": {
 								"$ref": "AAAAAAGOhte0RUzBWXw="
 							},
-							"name": "Operation2"
+							"name": "getDepth"
 						},
 						{
 							"_type": "UMLOperation",
@@ -6092,7 +6101,8 @@
 								"$ref": "AAAAAAGOhwfjmtgHYEc="
 							},
 							"name": "brojRacuna",
-							"visibility": "private"
+							"visibility": "private",
+							"type": ""
 						},
 						{
 							"_type": "UMLAttribute",
@@ -6101,7 +6111,8 @@
 								"$ref": "AAAAAAGOhwfjmtgHYEc="
 							},
 							"name": "stanje",
-							"visibility": "private"
+							"visibility": "private",
+							"type": ""
 						},
 						{
 							"_type": "UMLAttribute",
@@ -6110,7 +6121,8 @@
 								"$ref": "AAAAAAGOhwfjmtgHYEc="
 							},
 							"name": "nacin",
-							"visibility": "private"
+							"visibility": "private",
+							"type": ""
 						}
 					],
 					"operations": [
