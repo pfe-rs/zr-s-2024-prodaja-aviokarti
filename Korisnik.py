@@ -7,6 +7,7 @@ class Korisnik:
         self._preference = None
         self._kontakt = None
         self._placanje = None
+        self.rezervisaneKarte = []
 
     def getUsername(self):
         return self._username
@@ -29,8 +30,8 @@ class Korisnik:
     def getIstorijaPutovanja(self):
         return self._istorijaPutovanja
     
-    def setIstorijaPutovanja(self, istorijaPutovanja):
-        self._istorijaPutovanja = istorijaPutovanja
+    def setIstorijaPutovanja(self, novo):
+        self._istorijaPutovanja.append(novo)
 
     def getPreference(self):
         return self._preference
@@ -44,10 +45,10 @@ class Korisnik:
     def setKontakt(self, kontakt):
         self._kontakt = kontakt
 
-    def getPlacanje(self):
+    def getNacinPlacanja(self):
         return self._placanje
     
-    def setPlacanje(self, placanje):
+    def setNacinPlacanja(self, placanje):
         self._placanje = placanje
 
     def dajArgumente(self, atributi, aviokompanija):
@@ -85,7 +86,12 @@ class Korisnik:
                 self.setLozinka(lgin[1])
                 return True
         return False
-
+    
+    def getRezervisaneKarte(self):
+        return self._rezervisaneKarte
+    
+    def setRezervisaneKarte(self, novo):
+        self._rezervisaneKarte.append(novo)
 
     def logout(self):
         self._username = None
@@ -95,3 +101,31 @@ class Korisnik:
         self._preference = None
         self._kontakt = None
         self._kartica = None
+    
+    def kupiKartu(self, sediste, klasaLeta):
+        sediste.setDostupnost(False)
+        self.get
+        for x in klasaLeta.getSedista():
+            if x.getId() == sediste.getId():
+                klasaLeta.getSedista().remove(x)
+
+
+    def birajSediste(self, sediste):
+        return sediste.getDostupnost()
+    
+    def otkaziLet(self, let):
+        for x in self.getRezervisaneKarte():
+            if (x.getPolazak().getDatum(), x.getPolazak().getVreme(), x.getPolazak().getDatum(), x.getDolazak().getDatum(), x.getDolazak().getVreme(), x.getDolazak().getDatum()) == (let.getPolazak().getDatum(), let.getPolazak().getVreme(), let.getPolazak().getDatum(), let.getDolazak().getDatum(), let.getDolazak().getVreme(), let.getDolazak().getDatum()):
+                Korisnik.getRezervisaneKarte().remove(x)
+
+    def rezervisiKartu(self, let, klasa, sediste):
+        self.setRezervisaneKarte([let, klasa, sediste])
+
+    def izmenaRezervacije(self, i, let, arg):
+        pass
+        '''
+        if arg == "let":
+            self.setRezervisaneKarte()[i] = let
+        elif arg == "sediste":
+            self.getRezervisaneKarte()
+        elif arg'''
