@@ -1,4 +1,10 @@
-from Modeli import *
+from Node import *
+from KlasaLeta import *
+from Sediste import *
+from Destinacija import *
+from Let import *
+from Korisnik import *
+from Aviokompanija import *
 import pytest
 
 aviokompanija = Aviokompanija()
