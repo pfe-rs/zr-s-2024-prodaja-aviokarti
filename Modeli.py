@@ -12,7 +12,7 @@ class Node:
                         if child is not child_node]
         
     def dfs_search(self, target):
-        print(self.depth, self.value, target[self.depth])
+        
         if self is None:
             return False
 
