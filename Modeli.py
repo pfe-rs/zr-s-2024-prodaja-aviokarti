@@ -1,24 +1,34 @@
 class Node:
     def __init__(self, value, depth):
-        self.value = value
-        self.depth = depth
-        self.children = []
+        self._value = value
+        self._depth = depth
+        self._children = []
 
-    def add_child(self, child_node):
-        self.children.append(child_node) 
+    def getValue(self):
+        return self._value
+    
+    def getDepth(self):
+        return self._depth
+    
+    def getChildren(self):
+        return self._children
 
-    def remove_child(self, child_node):
-        self.children = [child for child in self.children 
+    def addChild(self, child_node):
+        self.getChildren.append(child_node) 
+
+    def removeChild(self, child_node):
+        self.getChildren = [child for child in self.getChildren 
                         if child is not child_node]
         
-    def dfs_search(self, target):
+
+    def dfsSearch(self, target):
         if self is None:
             return False
 
-        if self.depth == 5 and self.value == target[self.depth]:
+        if self.getDepth == 5 and self.getValue == target[self.getDepth]:
             return True
 
-        for child in self.children:
+        for child in self.getChildren:
             if child.dfs_search(target):
                 return True
 
@@ -140,8 +150,8 @@ class Korisnik:
     def getIstorijaPutovanja(self):
         return self._istorijaPutovanja
     
-    def setIstorijaPutovanja(self, istorijaPutovanja):
-        self._istorijaPutovanja = istorijaPutovanja
+    def setIstorijaPutovanja(self, novo):
+        self._istorijaPutovanja.append(novo)
 
     def getPreference(self):
         return self._preference
@@ -178,6 +188,7 @@ class Korisnik:
 
     def kupiKartu(self, sediste, klasaLeta):
         sediste.setDostupnost(False)
+        self.get
         for x in klasaLeta.getSedista():
             if x.getId() == sediste.getId():
                 klasaLeta.getSedista().remove(x)
