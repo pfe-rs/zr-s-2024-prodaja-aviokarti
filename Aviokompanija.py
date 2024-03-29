@@ -26,5 +26,5 @@ class Aviokompanija:
                     print("desilo se")
                     tr_node = child
                     break
-            tr_node.add_child(Node(destinacije[i], i))
-            tr_node = tr_node.children[-1]
+            tr_node.addChild(Node(destinacije[i], i))
+            tr_node = tr_node.getChildren()[-1]
