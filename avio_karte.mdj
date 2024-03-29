@@ -356,6 +356,9 @@
 									"fontColor": "#3B0202",
 									"font": "Arial;13;0",
 									"left": 304,
+									"top": 206,
+									"width": 111.80078125,
+									"height": 53
 									"top": 188,
 									"width": 111.80078125,
 									"height": 83
@@ -3263,7 +3266,7 @@
 									},
 									"visible": false,
 									"font": "Arial;13;0",
-									"left": 392,
+									"left": 392
 									"top": 293,
 									"height": 13,
 									"alpha": 1.5707963267948966,

@@ -12,7 +12,6 @@ class Node:
                         if child is not child_node]
         
     def dfs_search(self, target):
-        #print(self.depth, self.value, target[self.depth])
         if self is None:
             return False
 
@@ -24,7 +23,6 @@ class Node:
             if child.value == target[self.depth + 1]:
                 if child.dfs_search(target):
                     return True
-
 
 class Destinacija:
     def __init__(self, vreme, datum, mesto, polazakDolazak):
@@ -198,6 +196,16 @@ class Korisnik:
         self._kontakt = None
         self._kartica = None
 
+
+    def kupiKartu(self, sediste, klasaLeta):
+        sediste.setDostupnost(False)
+        for x in klasaLeta.getSedista():
+            if x.getId() == sediste.getId():
+                klasaLeta.getSedista().remove(x)
+
+
+
+
 KlasaEkonomska = KlasaLeta(0, [Sediste(0, 1), Sediste(1, 1)], 500) # 0 - ekonomska
 KlasaBiznis = KlasaLeta(1, [Sediste(0, 1), Sediste(1, 1)], 1000) # 1 - biznis
 KlasaPrva = KlasaLeta(2, [Sediste(0, 1), Sediste(1, 1)], 2500) # 2 - prva
@@ -207,39 +215,95 @@ Dolazak = Destinacija("22:00", "04.04.2024", "Madrid", 1) # 1 - dolazak
 
 Let1 = Let(300, 150, [KlasaEkonomska, KlasaBiznis, KlasaPrva], Polazak, Dolazak)
 
-"""
-root = Node(-1, -1)
-tr_node = Node("London", 0)
-root.add_child(tr_node)
-sledeci_node = Node("04.04.2024", 1)
-tr_node.add_child(sledeci_node)
-tr_node = sledeci_node
-sledeci_node = Node("19:30", 2)
-tr_node.add_child(sledeci_node)
 
-tr_node = sledeci_node
-sledeci_node = Node("Madrid", 3)
-tr_node.add_child(sledeci_node)
-
-tr_node = sledeci_node
-sledeci_node = Node("04.04.2024", 4)
-tr_node.add_child(sledeci_node)
-
-tr_node = sledeci_node
-sledeci_node = Node("22:00", 5)
-tr_node.add_child(sledeci_node)
-"""
 
 korisnik = Korisnik()
+aviokompanija = Aviokompanija()
+#print(aviokompanija._letovi.children[0].value)
+
+
+
+
+
+a = input("uneti 'preference' da se ooguci podesavanje ili 'let' da bi se pretrazio let: ")
+while a not in ['preference', 'let']:
+    a = input("uneti 'preference' da se ooguci podesavanje ili 'let' da bi se pretrazio let: ")
+if a == "preference":
+    korisnik.setPreference(input("uneti preference: ").split())
+    a = input("uneti 'let' ukoliko zelite da nastavite kupovinu: ")
+
+
+if a == "let":
+
+    argumenti = input("uneti redom mesto polaska, datum i vreme potom destinaciju, datim dolaska i vreme sletanja: ").split()    #["London", "04.04.2024", "19:30", "Madrid", "04.04.2024", "22:00"]
+
+
+    while not korisnik.dajArgumente(argumenti, aviokompanija):
+        argumenti = input("NE POSTOJI LET POKUSAJ PONOVO: ").split()    #["London", "04.04.2024", "19:30", "Madrid", "04.04.2024", "22:00"]
+
+    
+    klasa = input("uneti 0 za ekonomsku, 1 za biznis, 2 za prvu klasu: ")
+    while not klasa in ["1", "2", "0"]:
+        klasa = input("uneti 0 za ekonomsku, 1 za biznis, 2 za prvu klasu: ")
+
+    sedista = []
+
+    while True:
+        if klasa == "0":
+            if not KlasaEkonomska.proveriZauzetost():
+                sedista = KlasaEkonomska.getSedista()
+                klasa = KlasaEkonomska
+                break
+            else:
+                sedista = []
+                print("klasa nije dostupna")
+                klasa = input("klasa nije dostupna, uneti 1 ili 2: ")
+                break
+
+        elif klasa == "1":
+            if not KlasaBiznis.proveriZauzetost():
+                sedista = KlasaBiznis.getSedista()
+                klasa = KlasaBiznis
+                break
+            else:
+                sedista = []
+                print("klasa nije dostupna")
+                klasa = input("klasa nije dostupna, uneti 0 ili 2: ")
+                break
+
+        elif klasa == "2":
+            if not KlasaPrva.proveriZauzetost():
+                sedista = KlasaPrva.getSedista()
+                klasa = KlasaPrva
+                break
+            else:
+                sedista = []
+                print("klasa nije dostupna")
+                klasa = input("klasa nije dostupna, uneti 0 ili 1: ")
+                break
+
+        print(sedista)
+
+    sediste = Sediste(int(input("uneti redni broj sedista: ")), 1)
+    
+    while not sediste.getDostupnost():
+        sediste = Sediste(int(input("SEDISTE NIJE DOSTUPNO uneti redni broj sedista: ")), 1)
+
+    korisnik.kupiKartu(sediste, klasa)
+    print('CESTITAMO KUPILI STE KARTU')
+
+
+
+korisnik.logout()
+
+
+    
+
+
 
 argumenti = ["London", "04.04.2024", "19:30", "Madrid", "04.04.2024", "22:00"]
-
-aviokompanija = Aviokompanija()
 
 aviokompanija.dodajLet(Let1)
 
 #print(aviokompanija._letovi.children[0].value)
 print(korisnik.dajArgumente(argumenti, aviokompanija))
-
-
-
