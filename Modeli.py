@@ -25,6 +25,17 @@ print(korisnik.getUsername(), korisnik.getLozinka())
 print(korisnik.login(['pavleiv', 'qwerty123']))   
 print(korisnik.getUsername(), korisnik.getLozinka())
 
+
+    def kupiKartu(self, sediste, klasaLeta):
+        sediste.setDostupnost(False)
+        self.get
+        for x in klasaLeta.getSedista():
+            if x.getId() == sediste.getId():
+                klasaLeta.getSedista().remove(x)
+
+
+
+
 KlasaEkonomska = KlasaLeta(0, [Sediste(0, 1), Sediste(1, 1)], 500) # 0 - ekonomska
 KlasaBiznis = KlasaLeta(1, [Sediste(0, 1), Sediste(1, 1)], 1000) # 1 - biznis
 KlasaPrva = KlasaLeta(2, [Sediste(0, 1), Sediste(1, 1)], 2500) # 2 - prva
