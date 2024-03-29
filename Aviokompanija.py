@@ -22,7 +22,7 @@ class Aviokompanija:
                 #print(destinacije[i], child.value)
                 #for child2 in child.children:
                 #    print(child2.value)
-                if destinacije[i] == child.value:
+                if destinacije[i] == child.getValue():
                     print("desilo se")
                     tr_node = child
                     break
