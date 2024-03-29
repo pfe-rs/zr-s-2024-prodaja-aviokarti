@@ -16,7 +16,7 @@ class Aviokompanija:
         dolazak = let.getDolazak()
         destinacije = [polazak.getMesto(), polazak.getDatum(), polazak.getVreme(), dolazak.getMesto(), dolazak.getDatum(), dolazak.getVreme()]
         for i in range(6):
-            for child in tr_node.children:
+            for child in tr_node.getChildren():
                 #print("Dodavanje")
                 #print(tr_node.value)
                 #print(destinacije[i], child.value)
