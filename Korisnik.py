@@ -121,11 +121,12 @@ class Korisnik:
     def rezervisiKartu(self, let, klasa, sediste):
         self.setRezervisaneKarte([let, klasa, sediste])
 
-    def izmenaRezervacije(self, i, let, arg):
-        pass
-        '''
+    def izmenaRezervacije(self, i, promena, arg):
         if arg == "let":
-            self.setRezervisaneKarte()[i] = let
+            self.setRezervisaneKarte()[i][0] = promena
         elif arg == "sediste":
-            self.getRezervisaneKarte()
-        elif arg'''
+            self.getRezervisaneKarte()[i][2] = promena
+        elif arg == "klasa":
+            self.getRezervisaneKarte()[i][1] = promena
+
+        
