@@ -6,6 +6,9 @@ class Let:
         self._polazak = polazak
         self._dolazak = dolazak
 
+    def __str__(self):
+        return str(self.getPolazak()) + ',' + str(self.getDolazak())
+
     def getBrojPutnika(self):
         return self._brojPutnika
     

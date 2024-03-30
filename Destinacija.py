@@ -5,6 +5,9 @@ class Destinacija:
         self._mesto = mesto
         self._polazakDolazak = polazakDolazak
 
+    def __str__(self):
+        return self.getMesto() + ' ' + self.getDatum() + ' ' + self.getVreme()
+
     def getVreme(self):
         return self._vreme
     
