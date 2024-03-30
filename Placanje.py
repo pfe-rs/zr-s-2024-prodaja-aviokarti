@@ -21,7 +21,7 @@ class Placanje:
     def setStanje(self, suma):
         self._stanje = suma
     
-    def setBrojNacin(self, nacin):
+    def setNacin(self, nacin):
         self._nacin = nacin
 
     def plati(self, suma):

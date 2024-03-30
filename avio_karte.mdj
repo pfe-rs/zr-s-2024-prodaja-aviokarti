@@ -3036,26 +3036,6 @@
 											"height": 13,
 											"text": "+otkaziLet()",
 											"horizontalAlignment": 0
-										},
-										{
-											"_type": "UMLOperationView",
-											"_id": "AAAAAAGOi5KMcuIbrt4=",
-											"_parent": {
-												"$ref": "AAAAAAGOgJKadMhi5C8="
-											},
-											"model": {
-												"$ref": "AAAAAAGOi5KMaOIPkXw="
-											},
-											"lineColor": "#FF3F00",
-											"fillColor": "#FFFF91",
-											"fontColor": "#D63500",
-											"font": "Arial;13;0",
-											"left": 29,
-											"top": 630,
-											"width": 140.09619140625,
-											"height": 13,
-											"text": "+promeniSediste()",
-											"horizontalAlignment": 0
 										}
 									],
 									"lineColor": "#FF3F00",
@@ -3065,7 +3045,7 @@
 									"left": 24,
 									"top": 265,
 									"width": 150.09619140625,
-									"height": 383
+									"height": 368
 								},
 								{
 									"_type": "UMLReceptionCompartmentView",
@@ -3110,7 +3090,7 @@
 							"left": 24,
 							"top": 112,
 							"width": 149.09619140625,
-							"height": 551,
+							"height": 528,
 							"nameCompartment": {
 								"$ref": "AAAAAAGOgJKac8hcm7w="
 							},
@@ -3340,7 +3320,7 @@
 											"top": 603,
 											"width": 159,
 											"height": 13,
-											"text": "+addLet()",
+											"text": "+dodajLet()",
 											"horizontalAlignment": 0
 										},
 										{
@@ -4311,6 +4291,26 @@
 											"height": 13,
 											"text": "+setChildren()",
 											"horizontalAlignment": 0
+										},
+										{
+											"_type": "UMLOperationView",
+											"_id": "AAAAAAGOjp87606jUH0=",
+											"_parent": {
+												"$ref": "AAAAAAGOhte0R0zKdQI="
+											},
+											"model": {
+												"$ref": "AAAAAAGOjp874U6R4Y8="
+											},
+											"lineColor": "#4B0929",
+											"fillColor": "#FFD2E8",
+											"fontColor": "#4B0929",
+											"font": "Arial;13;0",
+											"left": 869,
+											"top": 668,
+											"width": 90.22265625,
+											"height": 13,
+											"text": "+setValue()",
+											"horizontalAlignment": 0
 										}
 									],
 									"lineColor": "#4B0929",
@@ -4320,7 +4320,7 @@
 									"left": 864,
 									"top": 558,
 									"width": 100.22265625,
-									"height": 113
+									"height": 128
 								},
 								{
 									"_type": "UMLReceptionCompartmentView",
@@ -4369,7 +4369,7 @@
 							"left": 864,
 							"top": 480,
 							"width": 99.22265625,
-							"height": 191,
+							"height": 206,
 							"nameCompartment": {
 								"$ref": "AAAAAAGOhte0RkzEEtE="
 							},
@@ -4873,7 +4873,7 @@
 							"left": 256,
 							"top": 376,
 							"width": 112.248046875,
-							"height": 191,
+							"height": 206,
 							"nameCompartment": {
 								"$ref": "AAAAAAGOhwfjm9gKjTA="
 							},
@@ -6021,14 +6021,6 @@
 								"$ref": "AAAAAAGOgJKacshZ1Gw="
 							},
 							"name": "otkaziLet"
-						},
-						{
-							"_type": "UMLOperation",
-							"_id": "AAAAAAGOi5KMaOIPkXw=",
-							"_parent": {
-								"$ref": "AAAAAAGOgJKacshZ1Gw="
-							},
-							"name": "promeniSediste"
 						}
 					]
 				},
@@ -6074,7 +6066,7 @@
 							"_parent": {
 								"$ref": "AAAAAAGOgZzA6MNKsCI="
 							},
-							"name": "addLet"
+							"name": "dodajLet"
 						},
 						{
 							"_type": "UMLOperation",
@@ -6197,6 +6189,14 @@
 								"$ref": "AAAAAAGOhte0RUzBWXw="
 							},
 							"name": "setChildren"
+						},
+						{
+							"_type": "UMLOperation",
+							"_id": "AAAAAAGOjp874U6R4Y8=",
+							"_parent": {
+								"$ref": "AAAAAAGOhte0RUzBWXw="
+							},
+							"name": "setValue"
 						}
 					]
 				},
